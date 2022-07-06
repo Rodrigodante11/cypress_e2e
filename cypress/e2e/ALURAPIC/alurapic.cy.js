@@ -62,7 +62,7 @@ describe('Login e registro de usuarios alura pic ', () => {
         cy.contains('a', '(Logout)').should('be.visible');
 
     })
-
+    //teste
     it.only('fazer login de usuario invalido', () => {
 
         cy.login('jacqueline', '1234') // comando personalizado
