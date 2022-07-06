@@ -7,12 +7,8 @@ describe('Login de usuarios alura pic ', () => {
 
     it('fazer login de usuario valido', () => {
 
-        cy.login('flavio', '123') // comando personalizado
+        cy.login(Cypress.env('userName'), Cypress.env('password')) // comando personalizado
 
-        cy.get('input[formcontrolname="userName"]').type('flavio');
-        cy.get('input[formcontrolname="password"]').type('123');
-        cy.get('button[type="submit"]').click();
-        
         cy.contains('a', '(Logout)').should('be.visible');
 
     })
